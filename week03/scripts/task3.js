@@ -14,6 +14,7 @@ function addNumbers() {
   let addend1 = parseInt(document.querySelector('#addend1').value);
   let addend2 = parseInt(document.querySelector('#addend2').value);
   let result = add(addend1, addend2);
+  
 
     // Step 4: Assign the return value to an HTML form element with an ID of sum
   document.querySelector('#sum').value = result;
