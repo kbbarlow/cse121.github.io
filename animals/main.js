@@ -2,7 +2,7 @@ import { animals } from './animals.js';
 import { sortByNameAscending, sortByNameDescending } from './sortHelpers.js';
   function output(results) {
     results.forEach(function(item){
-      let artcile = document.createElement('article');
+      let article = document.createElement('article');
       let petName = document.createElement('h2');
       let species = document.createElement('h3');
       petName.textContent =item.name;
