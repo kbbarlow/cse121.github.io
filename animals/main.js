@@ -12,17 +12,17 @@ import { sortByNameAscending, sortByNameDescending } from "./sortHelpers.js";
 
       article.appendChild(petName);
       article.appendChild(species);
-      
-      document.querySelector("#pets").appendChild(article);
+
+      document.querySelector('#pets').appendChild(article);
 
     });
   };
   function sortBy() {
-    document.querySelector("#pets").innerHTML = "";
-    let sort = document.querySelector("#sortBy").value;
-    if (sort == "petNameAscending") {
+    document.querySelector('#pets').innerHTML = "";
+    let sort = document.querySelector('#sortBy').value;
+    if (sort == 'petNameAscending') {
       output(animals.sort(sortByNameAscending));
-    } else if (sort == "petNameDescending") {
+    } else if (sort == 'petNameDescending') {
       output(animals.sort(sortByNameDescending));
     } else {
       alert("Pick asending or descending");
