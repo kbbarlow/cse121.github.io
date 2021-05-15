@@ -24,7 +24,8 @@ export function alertMessage(message, duration = 3000) {
   }, duration);
 }
 
-// let's use an object to group together functions that generate specific HTML elements. then we can export them all together
+// let's use an object to group together functions that generate 
+//specific HTML elements. then we can export them all together
 export const buildElements = {
   // build an html table to display the gpa data
   gpaTable: function (data, selector) {
@@ -33,7 +34,8 @@ export const buildElements = {
 
     // create a new table element
 
-    // for each row in our data create a row of markup using a template literal string ie `My name is ${name}`
+    // for each row in our data create a row of markup using a 
+    //template literal string ie `My name is ${name}`
 
     // add the markup into the table element
 
