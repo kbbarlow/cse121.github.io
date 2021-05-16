@@ -3,51 +3,64 @@
 /* DATA */
 
 // Step 1: Declare a new variable to hold information about yourself
-const self = {
-  name:'Brooke Barlow',
-  photo:'images/smallbrooke.jpeg',
+const myself = {
+  name: 'Brooke Barlow',
+  photo: 'images/smallbrooke.jpeg',
   favoriteFoods: ['pizza', 'apples', 'hamburgers', 'indian food', 'ice cream'],
-  hobbies:['Mountain biking', 'hiking', 'walking', 'gardening', 'pickleball'],
-  placesLived:[
-    {'Coeur d\'Alene': 29}
-  ],
-
-}
-// Step 2: Inside of the object, add a property named name with a value of your name as a string
-
-// Step 3: Add another property named photo with a value of the image path and name (used in Task 2) as a string
-
-// Step 4: Add another property named favoriteFoods with a value of an array of your favorite foods as strings ( hint: [] )
-
-// Step 5: Add another property named hobbies with a value of an array of your hobbies as strings
-
-// Step 6: Add another property named placesLived with a value of an empty array
-
-// Step 7: Inside of the empty array above, add a new object with two properties: place and length and values of an empty string
-
-// Step 8: For each property, add appropriate values as strings
-
-// Step 9: Add additional objects with the same properties for each place you've lived
-
-
-/* OUTPUT */
-
-// Step 1: Assign the value of the name property (of the object declared above) to the HTML <span> element with an ID of name
-
-// Step 2: Assign the value of the photo property as the src attribute of the HTML <img> element with an ID of photo
-
-// Step 3: Assign the value of the name property as the alt attribute of the HTML <img> element with an ID of photo
-
-// Step 4: For each favorite food in the favoriteFoods property, create an HTML <li> element and place its value in the <li> element
-
-// Step 5: Append the <li> elements created above as children of the HTML <ul> element with an ID of favorite-foods
-
-// Step 6: Repeat Step 4 for each hobby in the hobbies property
-
-// Step 7: Repeat Step 5 using the HTML <ul> element with an ID of hobbies
-
-// Step 8: For each object in the <em>placesLived</em> property:
-// - Create an HTML <dt> element and put its place property in the <dt> element
-// - Create an HTML <dd> element and put its length property in the <dd> element
-
-// Step 9: Append the HTML <dt> and <dd> elements created above to the HTML <dl> element with an ID of places-lived
+  hobbies: ['Mountain biking', 'hiking', 'walking', 'gardening', 'pickleball'],
+  placesLived: [
+    {
+      place: 'Coeur dAlene, ID',
+      length: '29 years'
+    },
+    {
+      place:'Highland, UT',
+      length:'11 years' 
+    }
+  ]
+};
+document.querySelector('#name').textContent =myself.name;
+document.querySelector('#photo').setAttribute('src', myself.photo);
+document.querySelector('#photo').setAttribute('alt', myself.name);
+let foods1 = document.createElement('li');
+foods1.textContent = myself.favoriteFoods[0];
+let foods2 = document.createElement('li');
+foods2.textContent = myself.favoriteFoods[1];
+let foods3 = document.createElement('li');
+foods3.textContent = myself.favoriteFoods[2];
+let foods4 = document.createElement('li');
+foods4.textContent = myself.favoriteFoods[3];
+let foods5 = document.createElement('li');
+foods5.textContent = myself.favoriteFoods[4];
+document.querySelector('#favorite-foods').appendChild(foods1);
+document.querySelector('#favorite-foods').appendChild(foods2);
+document.querySelector('#favorite-foods').appendChild(foods3);
+document.querySelector('#favorite-foods').appendChild(foods4);
+document.querySelector('#favorite-foods').appendChild(foods5);
+let hobbies1 = document.createElement('li');
+hobbies1.textContent = myself.hobbies[0];
+let hobbies2 = document.createElement('li');
+hobbies2.textContent = myself.hobbies[1];
+let hobbies3 = document.createElement('li');
+hobbies3.textContent = myself.hobbies[2];
+let hobbies4 = document.createElement('li');
+hobbies4.textContent = myself.hobbies[3];
+let hobbies5 = document.createElement('li');
+hobbies5.textContent = myself.hobbies[4];
+document.querySelector('#hobbies').appendChild(hobbies1);
+document.querySelector('#hobbies').appendChild(hobbies2);
+document.querySelector('#hobbies').appendChild(hobbies3);
+document.querySelector('#hobbies').appendChild(hobbies4);
+document.querySelector('#hobbies').appendChild(hobbies5);
+let place1lived = document.createElement('dt');
+place1lived.textContent=myself.placesLived[0].place;
+let place1length = document.createElement('dd');
+place1length.textContent=myself.placesLived[0].length;
+let place2lived = document.createElement('dt');
+place2lived.textContent=myself.placesLived[1].place;
+let place2length = document.createElement('dd');
+place2length.textContent=myself.placesLived[1].length;
+document.querySelector('#places-lived').appendChild(place1lived);
+document.querySelector('#places-lived').appendChild(place1length);
+document.querySelector('#places-lived').appendChild(place2lived);
+document.querySelector('#places-lived').appendChild(place2length);
