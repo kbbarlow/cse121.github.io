@@ -1,4 +1,5 @@
-// we really don't need the setGrades function anymore...so I replaced it with our transcript array
+// we really don't need the setGrades function anymore...
+//so I replaced it with our transcript array
 const transcript = [
   {
     semester: "Spring",
