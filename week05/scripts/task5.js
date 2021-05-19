@@ -29,25 +29,29 @@ let message2;
 // Step 2: Use switch, case and break to set the message variable to the day of the week as a string (e.g. Sunday, Monday, etc.) using the day of week variable declared in Step 2 above
 switch (dayofweek) {
   case 0:
-    day = "Sunday";
+    message2 = "Sunday";
     break;
   case 1:
-    day = "Monday";
+    message2 = "Monday";
     break;
   case 2:
-    day = "Tuesday";
+    message2 = "Tuesday";
     break;
   case 3:
-    day = "Wednesday";
+    message2 = "Wednesday";
     break;
   case 4:
-    day = "Thursday";
+    message2 = "Thursday";
     break;
   case 5:
-    day = "Friday";
+    message2 = "Friday";
     break;
   case 6:
-    day = "Saturday";
+    message2 = "Saturday";
+    break;
+  default:
+    message2 = 'Unknown - ' + dayOfWeek;
+    break;
 }
 
 /* OUTPUT */
