@@ -4,7 +4,6 @@
 
 // Step 1: Declare and initialize a new variable to hold the current date
 const date = new Date();
-console.log(date)
 
 // Step 2: Declare another variable to hold the day of the week
 let dayofweek = date.getDay();
@@ -15,7 +14,7 @@ let dayofweek = date.getDay();
 let message1;
 
 // Step 5: Using an if statement, if the day of the week is a weekday (i.e. Monday - Friday), set the message variable to the string 'Hang in there!'
-if (dayofweek >=1 || dayofweek<=5){
+if (dayofweek >=1 && dayofweek<=5){
   message1="Hang in there!"
 }
 // Step 6: Using an else statement, set the message variable to 'Woohoo!  It is the weekend!'
@@ -61,7 +60,7 @@ document.querySelector('#message2').textContent =message2;
 /* FETCH */
 
 // Step 1: Declare a global empty array variable to store a list of temples
-
+let templeList =[]
 // Step 2: Declare a function named output that accepts a list of temples as an array argument and does the following for each temple:
 // - Creates an HTML <article> element
 // - Creates an HTML <h3> element and add the temple's templeName property to it
