@@ -12,11 +12,17 @@ var dayofweek = date.getDay();
 // Step 3: Using the variable declared in Step 1, assign the value of the variable declared in Step 2 to the day of the week ( hint: getDay() )
 
 // Step 4: Declare a variable to hold a message that will be displayed
+var message = '';
 
 // Step 5: Using an if statement, if the day of the week is a weekday (i.e. Monday - Friday), set the message variable to the string 'Hang in there!'
-
+if (dayofweek >1 || dayofweek<6){
+  message="Hang in there!"
+}
 // Step 6: Using an else statement, set the message variable to 'Woohoo!  It is the weekend!'
-
+else {
+  message="Woohoo!  It is the weekend!"
+}
+console.log(message)
 
 /* SWITCH, CASE, BREAK */
 
