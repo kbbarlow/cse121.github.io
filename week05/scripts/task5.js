@@ -54,9 +54,9 @@ switch (new Date().getDay()) {
 /* OUTPUT */
 
 // Step 1: Assign the value of the first message variable to the HTML element with an ID of message1
-
+document.querySelector('#message1').textContent =message;
 // Step 2: Assign the value of the second message variable to the HTML element with an ID of message2
-
+document.querySelector('#message2').textContent =message2;
 
 /* FETCH */
 
