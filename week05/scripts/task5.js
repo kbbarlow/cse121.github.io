@@ -22,14 +22,34 @@ if (dayofweek >1 || dayofweek<6){
 else {
   message="Woohoo!  It is the weekend!"
 }
-console.log(message)
 
 /* SWITCH, CASE, BREAK */
 
 // Step 1: Declare a new variable to hold another message
-
+var message2 = '';
 // Step 2: Use switch, case and break to set the message variable to the day of the week as a string (e.g. Sunday, Monday, etc.) using the day of week variable declared in Step 2 above
-
+switch (new Date().getDay()) {
+  case 0:
+    day = "Sunday";
+    break;
+  case 1:
+    day = "Monday";
+    break;
+  case 2:
+    day = "Tuesday";
+    break;
+  case 3:
+    day = "Wednesday";
+    break;
+  case 4:
+    day = "Thursday";
+    break;
+  case 5:
+    day = "Friday";
+    break;
+  case 6:
+    day = "Saturday";
+}
 
 /* OUTPUT */
 
