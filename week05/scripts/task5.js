@@ -3,6 +3,9 @@
 /* IF/ELSE IF */
 
 // Step 1: Declare and initialize a new variable to hold the current date
+var date = new Date();
+var dayofweek = date.getDay();
+console.log(dayofweek);
 
 // Step 2: Declare another variable to hold the day of the week
 
