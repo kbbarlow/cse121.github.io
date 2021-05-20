@@ -132,8 +132,8 @@ const sortBy = () => {
     case "templeNameAscending":
       output(
         templeList.sort((temple1, temple2) => {
-          let templeName1 = temple1.dedicated;
-          let templeName2 = temple2.dedicated;
+          let templeName1 = temple1.templeName.toLowerCase();
+          let templeName2 = temple2.templeName.toLowerCase();
           if (templeName1 < templeName2) return -1;
           else if (templeName1 > templeName2) return 1;
           else return 0;
@@ -143,17 +143,6 @@ const sortBy = () => {
     case "templeNameDescending":
       output(
         templeList.sort((temple1, temple2) => {
-          let templeName1 = temple1.dedicated;
-          let templeName2 = temple2.dedicated;
-          if (templeName1 > templeName2) return -1;
-          else if (templeName1 < templeName2) return 1;
-          else return 0;
-        })
-      );
-      break;
-    case "templeNameDescending":
-      output(
-        templeList.sort((temple1, temple2) => {
           let templeName1 = temple1.templeName.toLowerCase();
           let templeName2 = temple2.templeName.toLowerCase();
           if (templeName1 > templeName2) return -1;
@@ -162,13 +151,24 @@ const sortBy = () => {
         })
       );
       break;
-    case "templeNameDescending":
+    case "yearDedicatedAscending":
       output(
         templeList.sort((temple1, temple2) => {
-          let templeName1 = temple1.templeName.toLowerCase();
-          let templeName2 = temple2.templeName.toLowerCase();
-          if (templeName1 > templeName2) return -1;
-          else if (templeName1 < templeName2) return 1;
+          let templeYear1 = temple1.dedicated;
+          let templeYear2 = temple2.dedicated;
+          if (templeYear1 > templeYear2) return -1;
+          else if (templeYear1 < templeYear2) return 1;
+          else return 0;
+        })
+      );
+      break;
+    case "yearDedicatedDescending":
+      output(
+        templeList.sort((temple1, temple2) => {
+          let templeYear1 = temple1.dedicated;
+          let templeYear2 = temple2.dedicated;
+          if (templeYear1 > templeYear2) return -1;
+          else if (templeYear1 < templeYear2) return 1;
           else return 0;
         })
       );
