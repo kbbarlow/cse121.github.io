@@ -116,11 +116,11 @@ const output = (temples) => {
 
 
 fetch = ('https://byui-cse.github.io/cse121b-course/week05/temples.json')
-.then((response)=> response.json())
-.then((temples)=>{
-  templeList =temples;
-  output(templeList);
-});
+  .then((response)=> response.json())
+  .then((temples)=>{
+    templeList =temples;
+    output(templeList);
+  });
 const reset = ()=>{
   document.querySelector('#temples').innerHTML = "";
 }
@@ -138,8 +138,8 @@ const sortBy = ()=>{
         (temple1, temple2)=>{
           let templeName1 = temple1.templeName.toLowerCase();
           let templeName2 = temple2.templeName.toLowerCase();
-          if(templeName1< templeName2)return -1;
-          else if (templeName1>templeName2)return 1;
+          if(templeName1 < templeName2) return -1;
+          else if (templeName1>templeName2) return 1;
           else return 0;
         }));
       break;
@@ -148,8 +148,8 @@ const sortBy = ()=>{
         (temple1, temple2)=>{
           let templeName1 = temple1.templeName.toLowerCase();
           let templeName2 = temple2.templeName.toLowerCase();
-          if(templeName1> templeName2) return -1;
-         else if (templeName1<templeName2) return 1;
+          if(templeName1 > templeName2) return -1;
+         else if (templeName1 < templeName2) return 1;
          else return 0;
        }));
      break; 
