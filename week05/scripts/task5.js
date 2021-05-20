@@ -72,20 +72,25 @@ document.querySelector('#message2').textContent =message2;
 // - Creates an HTML <img> element and add the temple's imageUrl property to the src attribute and the temple's templeName property to the alt attribute
 // - Appends the <h3> element, the two <h4> elements, and the <img> element to the <article> element as children
 // - Appends the <article> element to the HTML element with an ID of temples
-let templeList =[]
+let templeList =[];
 const output = (temples) => {
   temples.forEach(
-    temple=> {
+    temple => {
       let article = document.createElement("article");
+      
       let templeName = document.createElement("h3");
       templeName.textContent=temple.templeName;
+      
       let location = document.createElement("h4");
       location.textContent=temple.location;
+      
       let dedicated = document.createElement("h4");
       dedicated.textContent = temple.dedicated;
+      
       let image = document.createElement("img");
       image.setAttribute('src', temple.imageUrl);
       image.setAttribute('alt', temple.templeName);
+      
       article.appendChild(templeName);
       article.appendChild(location);
       article.appendChild(dedicated);
@@ -117,7 +122,7 @@ fetch = ('https://byui-cse.github.io/cse121b-course/week05/temples.json')
   output(templeList);
 });
 const reset = ()=>{
-  document.querySelector('#temples').innerHTML="";
+  document.querySelector('#temples').innerHTML = "";
 }
 // Step 9: Declare a function named sortBy that does the following:
 // - Calls the reset function
@@ -133,13 +138,9 @@ const sortBy = ()=>{
         (temple1, temple2)=>{
           let templeName1 = temple1.templeName.toLowerCase();
           let templeName2 = temple2.templeName.toLowerCase();
-          if(templeName1< templeName2){
-             return -1;
-          }else if (templeName1>templeName2) {
-            return 1;
-          }else{
-            return 0;
-          }
+          if(templeName1< templeName2)return -1;
+          else if (templeName1>templeName2)return 1;
+          else return 0;
         }));
       break;
     case 'templeNameDescending':
@@ -147,21 +148,17 @@ const sortBy = ()=>{
         (temple1, temple2)=>{
           let templeName1 = temple1.templeName.toLowerCase();
           let templeName2 = temple2.templeName.toLowerCase();
-          if(templeName1> templeName2){
-            return -1;
-         }else if (templeName1<templeName2) {
-           return 1;
-         }else{
-           return 0;
-         }
+          if(templeName1> templeName2) return -1;
+         else if (templeName1<templeName2) return 1;
+         else return 0;
        }));
      break; 
         
     default:
       output(templeList.sort(
         (temple1, temple2)=>
-          temple1.templeName.toLowerCase()> temple2.templeName.toLowerCase() ? 1:
-            temple2.templeNametoLowerCase()> temple1.templeName.toLowerCase() ? -1: 0))
+          temple1.templeName.toLowerCase() > temple2.templeName.toLowerCase() ? 1:
+            temple2.templeNametoLowerCase() > temple1.templeName.toLowerCase() ? -1: 0))
       break;
     }
   }
