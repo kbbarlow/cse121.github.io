@@ -132,10 +132,21 @@ const sortBy = () => {
     case "templeNameAscending":
       output(
         templeList.sort((temple1, temple2) => {
-          let templeName1 = temple1.templeName.toLowerCase();
-          let templeName2 = temple2.templeName.toLowerCase();
+          let templeName1 = temple1.dedicated;
+          let templeName2 = temple2.dedicated;
           if (templeName1 < templeName2) return -1;
           else if (templeName1 > templeName2) return 1;
+          else return 0;
+        })
+      );
+      break;
+    case "templeNameDescending":
+      output(
+        templeList.sort((temple1, temple2) => {
+          let templeName1 = temple1.dedicated;
+          let templeName2 = temple2.dedicated;
+          if (templeName1 > templeName2) return -1;
+          else if (templeName1 < templeName2) return 1;
           else return 0;
         })
       );
@@ -151,6 +162,17 @@ const sortBy = () => {
         })
       );
       break;
+    case "templeNameDescending":
+      output(
+        templeList.sort((temple1, temple2) => {
+          let templeName1 = temple1.templeName.toLowerCase();
+          let templeName2 = temple2.templeName.toLowerCase();
+          if (templeName1 > templeName2) return -1;
+          else if (templeName1 < templeName2) return 1;
+          else return 0;
+        })
+      );
+      break;  
 
     default:
       output(
