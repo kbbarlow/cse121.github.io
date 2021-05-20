@@ -150,29 +150,7 @@ const sortBy = () => {
           else return 0;
         })
       );
-      break;
-    case "yearDedicatedAscending":
-      output(
-        templeList.sort((temple1, temple2) => {
-          let templeYear1 = temple1.dedicated;
-          let templeYear2 = temple2.dedicated;
-          if (templeYear1 > templeYear2) return -1;
-          else if (templeYear1 < templeYear2) return 1;
-          else return 0;
-        })
-      );
-      break;
-    case "yearDedicatedDescending":
-      output(
-        templeList.sort((temple1, temple2) => {
-          let templeYear1 = temple1.dedicated;
-          let templeYear2 = temple2.dedicated;
-          if (templeYear1 > templeYear2) return -1;
-          else if (templeYear1 < templeYear2) return 1;
-          else return 0;
-        })
-      );
-      break;  
+      break; 
 
     default:
       output(
