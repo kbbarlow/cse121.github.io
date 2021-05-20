@@ -112,8 +112,8 @@ const output = (temples) => {
 //elements from the HTML element with an ID of temples
 
 fetch("https://byui-cse.github.io/cse121b-course/week05/temples.json")
-  .then((response) => response.json())
-  .then((temples) => {
+  .then(response => response.json())
+  .then(temples => {
     templeList = temples;
     output(templeList);
   });
