@@ -85,7 +85,6 @@ const output = (temples) => {
 
     let dedicated = document.createElement("h4");
     dedicated.textContent = temple.dedicated;
-    console.log(dedicated.substr(-4, 4))
 
     let image = document.createElement("img");
     image.setAttribute("src", temple.imageUrl);
