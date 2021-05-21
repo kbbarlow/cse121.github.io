@@ -74,29 +74,31 @@ document.querySelector("#message2").textContent = message2;
 // - Appends the <article> element to the HTML element with an ID of temples
 let templeList = [];
 const output = (temples) => {
-  temples.forEach((temple) => {
-    let article = document.createElement("article");
+  temples.forEach(
+    temple => {
+      let article = document.createElement("article");
 
-    let templeName = document.createElement("h3");
-    templeName.textContent = temple.templeName;
+      let templeName = document.createElement("h3");
+      templeName.textContent = temple.templeName;
 
-    let location = document.createElement("h4");
-    location.textContent = temple.location;
+      let location = document.createElement("h4");
+      location.textContent = temple.location;
 
-    let dedicated = document.createElement("h4");
-    dedicated.textContent = temple.dedicated;
+      let dedicated = document.createElement("h4");
+      dedicated.textContent = temple.dedicated;
 
-    let image = document.createElement("img");
-    image.setAttribute("src", temple.imageUrl);
-    image.setAttribute("alt", temple.templeName);
+      let image = document.createElement("img");
+      image.setAttribute("src", temple.imageUrl);
+      image.setAttribute("alt", temple.templeName);
 
-    article.appendChild(templeName);
-    article.appendChild(location);
-    article.appendChild(dedicated);
-    article.appendChild(image);
-    document.querySelector("#temples").appendChild(article);
-  });
-};
+      article.appendChild(templeName);
+      article.appendChild(location);
+      article.appendChild(dedicated);
+      article.appendChild(image);
+      document.querySelector("#temples").appendChild(article);
+    }
+  );
+}
 
 // Step 3: Using the built-in fetch method, call this absolute URL: 'https://byui-cse.github.io/cse121b-course/week05/temples.json'
 
@@ -119,7 +121,7 @@ fetch("https://byui-cse.github.io/cse121b-course/week05/temples.json")
   });
 const reset = () => {
   document.querySelector("#temples").innerHTML = "";
-};
+}
 // Step 9: Declare a function named sortBy that does the following:
 // - Calls the reset function
 // - Sorts the global temple list by the currently selected value of the HTML element with an ID of sortBy
@@ -130,26 +132,25 @@ const sortBy = () => {
   let filterlist = document.querySelector("#sortBy").value;
   switch (filterlist) {
     case "templeNameAscending":
-      output(
-        templeList.sort((temple1, temple2) => {
+      output(templeList.sort(
+        (temple1, temple2) => {
           let templeName1 = temple1.templeName.toLowerCase();
           let templeName2 = temple2.templeName.toLowerCase();
           if (templeName1 < templeName2) return -1;
           else if (templeName1 > templeName2) return 1;
           else return 0;
-        })
-      );
+        }));
       break;
     case "templeNameDescending":
       output(
-        templeList.sort((temple1, temple2) => {
+        templeList.sort(
+          (temple1, temple2) => {
           let templeName1 = temple1.templeName.toLowerCase();
           let templeName2 = temple2.templeName.toLowerCase();
           if (templeName1 > templeName2) return -1;
           else if (templeName1 < templeName2) return 1;
           else return 0;
-        })
-      );
+        }));
       break; 
 
     default:
