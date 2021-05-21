@@ -160,7 +160,7 @@ const sortBy = () => {
             temple2.templeNametoLowerCase() > temple1.templeName.toLowerCase()? -1: 0));
       break;
   }
-};
+}
 document.querySelector("#sortBy").addEventListener("change", sortBy);
 
 /* STRETCH */
