@@ -51,7 +51,10 @@ main {
   grid-template-columns: 1fr;
   padding: 10px;
 }
-
+input {
+  padding: 10px;
+  height: 40px;
+}
 header {
   margin-bottom: 10px;
 }
