@@ -64,7 +64,7 @@ const gpaCalculator = {
   // returns information about the semesters represented in the transcript
   getSemesterInfo: function () {
     // this should interate through the transcript and transform the data into this form: { label: "Fall 2020", value: "F20"}
-    return transcript.map(semester =>{
+    return transcript.map( semester =>{
       return{
         label: '${semester.semester} ${semester.year}',
         value: semester.semesterCode
