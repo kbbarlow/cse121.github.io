@@ -31,20 +31,32 @@ export const buildElements = {
   gpaTable: function (data, selector) {
     // get the container we will insert the finished table into.
     const container = qs(selector);
+    container.innerHTML="";
 
     // create a new table element
+    let table = document.createElement("table");
+    table.setAttribute("border", 1);
 
-    // for each row in our data create a row of markup using a 
-    //template literal string ie `My name is ${name}`
+    // for each row in our data create a row of markup using a
+        //template literal string ie `My name is ${name}` 
+    for(let record of data){
+      let row ='<tr><td>$(record.year)</td><td>$(record.semester)</td><td>$(record.gpa)</td><tr>';
+      table.innerHTML+=row;
+    }
+
 
     // add the markup into the table element
-
-    // append the finished table into the container we selected above.
+    container.appendChild(table);
   },
+    // append the finished table into the container we selected above.
+
   // populate a select element with the contents of the list.
   select: function (list, selector) {
     // get the <select> element from the DOM
     const selectEl = qs(selector);
     // loop through each item in our list, create an <option> element, set the value and innerHTML of the element and append it to the <select>
+    list.forEach(semester =>{
+      selectEl.innerHTML += '<option value="${semester.value}" + ${semester.label}</option>';
+    })
   }
 };

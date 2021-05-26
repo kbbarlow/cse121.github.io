@@ -64,19 +64,35 @@ const gpaCalculator = {
   // returns information about the semesters represented in the transcript
   getSemesterInfo: function () {
     // this should interate through the transcript and transform the data into this form: { label: "Fall 2020", value: "F20"}
+    return transcript.map(semester =>{
+      return{
+        label: '${semester.semester} ${semester.year}',
+        value: semester.semesterCode
+      };
+    });
   },
+  
   // calculates GPA for each semester in the transcript.
   calculateGpa: function () {
     // loop through the transcript, you will want to get the index as well as the current value
     // get the current record in the transcript...we will insert the gpaPoints and gpa into it.
     // do the lookup for each grade in the current record to convert to gpa points
     // with the gpa points calculate the gpa and store it in the current record
+    transcript.forEach(semester=>{
+      semester.gpaPoints =semester.grades.map(grade=>lookupGrade(grade)).reduce((total, value)=>total + value);
+      semester.gpa = semester.gpaPoints/semester.grades.length;
+    });
   },
   // After the GPA has been calculated we can retrieve it for all semesters or one semester.
   getGpaInfo: function (semester) {
     //check to see if they want all semesters...
     // if so then return the whole transcript
     // otherwise just give them the one they requested...(filter the transcript array!)
+    if (semester=="All"){
+      return transcript;
+    } else {
+      return transcript.filter(item => item.semesterCode == semester)
+    }
   }
 };
 export default gpaCalculator;

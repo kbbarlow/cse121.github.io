@@ -2,6 +2,8 @@ import { qs, setListener, alertMessage, buildElements } from "./ui.js";
 import gpaCalculator from "./gpa.js";
 
 // build semester drop down based off of transcript data.
+const semesters = gpaCalculator.getSemesterInfo();
+buildElements.select(semesters, "#semester");
 
 // event handler callback for our submit button
 function submit() {
@@ -10,10 +12,11 @@ function submit() {
   // how do we know which option was selected?
   console.dir(selectEl);
   // calculate the gpa
-
+  gpaCalculator.calculateGpa()
   // get the gpa info from our module for the specified semester
-
+  let gpaInfo = gpaCalculator.getGpaInfo(selectEl.value)
   // display our data in a table.
+  buildElements.gpaTable(gpaInfo, "#output");
 }
 
 setListener("#submitButton", "click", submit);
