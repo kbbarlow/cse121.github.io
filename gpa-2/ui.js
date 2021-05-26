@@ -56,7 +56,7 @@ export const buildElements = {
     const selectEl = qs(selector);
     // loop through each item in our list, create an <option> element, set the value and innerHTML of the element and append it to the <select>
     list.forEach(semester =>{
-      selectEl.innerHTML += '<option value="${semester.value}" + ${semester.label}</option>';
+      selectEl.innerHTML += '<option value="${semester.value}">${semester.label}</option>';
     });
   }
 };
