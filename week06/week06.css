@@ -51,7 +51,7 @@ main {
   grid-template-columns: 1fr;
   padding: 10px;
 }
-input {
+input, button {
   padding: 10px;
   height: 40px;
 }
