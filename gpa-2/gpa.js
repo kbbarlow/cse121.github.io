@@ -50,13 +50,13 @@ function lookupGrade(grade) {
 
 // this will need to be re-worked as we refactor...
 //we may end up just starting over if it changes too much
-function calculateGpa() {
-  setGrades();
-  let gradePoints = grades.map((grade) => lookupGrade(grade));
-  const gpa =
-    gradePoints.reduce((total, num) => total + num) / gradePoints.length;
-  return gpa;
-}
+// function calculateGpa() {
+//   setGrades();
+//   let gradePoints = grades.map((grade) => lookupGrade(grade));
+//   const gpa =
+//     gradePoints.reduce((total, num) => total + num) / gradePoints.length;
+//   return gpa;
+// }
 
 // since we have more than one function we need to expose outside the module now...lets encapsulate them in an object. 
 //The calculateGpa function will become a method inside of it.
