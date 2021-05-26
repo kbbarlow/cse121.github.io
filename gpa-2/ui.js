@@ -40,7 +40,7 @@ export const buildElements = {
     // for each row in our data create a row of markup using a
         //template literal string ie `My name is ${name}` 
     for(let record of data){
-      let row ='<tr><td>$(record.year)</td><td>$(record.semester)</td><td>$(record.gpa)</td><tr>';
+      let row ='<tr><td>${record.year}</td><td>${record.semester}</td><td>${record.gpa}</td><tr>';
       table.innerHTML+=row;
     }
 
