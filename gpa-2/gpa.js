@@ -78,7 +78,7 @@ const gpaCalculator = {
     // get the current record in the transcript...we will insert the gpaPoints and gpa into it.
     // do the lookup for each grade in the current record to convert to gpa points
     // with the gpa points calculate the gpa and store it in the current record
-    transcript.forEach(semester=>{
+    transcript.forEach(semester => {
       semester.gpaPoints =semester.grades.map(grade=>lookupGrade(grade)).reduce((total, value)=>total + value);
       semester.gpa = semester.gpaPoints/semester.grades.length;
     });
