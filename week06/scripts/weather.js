@@ -1,5 +1,6 @@
-const APIurl = 'https://api.openweathermap.org/data/2.5/onecall?lat=20.422984&lon=-86.922343&appid=f59f532633b10d55bbf07be7f8538bff&units=imperial'
+// const APIurl = 'https://api.openweathermap.org/data/2.5/onecall?lat=20.422984&lon=-86.922343&appid=f59f532633b10d55bbf07be7f8538bff&units=imperial'
 // const APIurl = 'http://maps.openweathermap.org/maps/2.0/weather/{op}/{z}/{x}/{y}&appid=2b00e7c5c696ad965d1f6a70f5d6c59b&units=imperial'
+const APIurl ='api.openweathermap.org/data/2.5/weather?zip=84003,us&appid=2b00e7c5c696ad965d1f6a70f5d6c59b&units=imperial'
 
 fetch(APIurl)
   .then((response) => response.json())
@@ -16,7 +17,7 @@ fetch(APIurl)
 
 
 
-    
+
     // var forecast = jsObject.daily.slice(1, 4);
     // const weekdays = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
     // for (let day = 0; day < forecast.length; day++) {
