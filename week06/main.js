@@ -10,6 +10,7 @@ buttonInsert.onclick = function () {
   console.log(key, value);
   if (key && value){
     localStorage.setItem(key, value);
+    location.reload();
   }
 };
 
