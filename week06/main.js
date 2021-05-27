@@ -5,9 +5,11 @@ const btnClear = document.getElementById('btnClear');
 const output = document.getElementById('output');
 
 buttonInsert.onclick = function () {
-  const key = inputKey.toLowerCase().value;
+  const key = inputKey.value;
   const value = inputValue.value;
   console.log(key, value);
-
+  if (key && value){
+    localStorage.setItem(key, value);
+  }
 };
 
