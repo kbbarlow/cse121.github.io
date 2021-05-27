@@ -22,6 +22,6 @@ for (let i = 0; i < localStorage.length; i++){
   var valu = value.split("*");
   alert (valu[0]); 
   sum += parseInt(valu[0]); 
-  output.innerHTML +=`${key}: ${value} : ${sum}<br />`;
+  output.innerHTML +=`Date ${key}: ${value} minutes: ${sum} sum <br />`;
 }
 
