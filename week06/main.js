@@ -1,3 +1,6 @@
+const currentDate = new Date();
+document.querySelector('#year').textContent = currentDate.getFullYear();
+
 const inputKey = document.getElementById('inputKey');
 const inputValue = document.getElementById('inputValueinputKey');
 const buttonInsert = document.getElementById('buttonInsert');
