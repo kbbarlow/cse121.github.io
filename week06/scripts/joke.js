@@ -1,7 +1,3 @@
-const jokeAPI = 'https://dad-jokes.p.rapidapi.com/random/joke'
-
-
-
 fetch("https://dad-jokes.p.rapidapi.com/random/joke", {
 	"method": "GET",
 	"headers": {
@@ -9,8 +5,9 @@ fetch("https://dad-jokes.p.rapidapi.com/random/joke", {
 		"x-rapidapi-host": "dad-jokes.p.rapidapi.com"
 	}
 })
-.then(response => {
-	console.log(response);
+.then((response) => response.json())
+.then((jsObject) =>{
+	console.log(jsObject)
 })
 .catch(err => {
 	console.error(err);
