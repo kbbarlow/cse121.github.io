@@ -4,7 +4,7 @@ document.querySelector('#year').textContent = currentDate.getFullYear();
 const inputKey = document.getElementById('inputKey');
 const inputValue = document.getElementById('inputValue');
 const buttonInsert = document.getElementById('buttonInsert');
-const btnClear = document.getElementById('btnClear');
+const buttonClear = document.getElementById('buttonClear');
 const output = document.getElementById('output');
 
 buttonInsert.onclick = function () {
@@ -14,6 +14,9 @@ buttonInsert.onclick = function () {
     localStorage.setItem(key, value);
     location.reload();
   }
+};
+buttonClear.onclick = function () {
+  window.localStorage.clear();
 };
 var sum = 0;
 for (let i = 0; i < localStorage.length; i++){
