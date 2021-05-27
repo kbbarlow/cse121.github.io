@@ -12,6 +12,11 @@ fetch(APIurl)
     document.getElementById('current-temp').innerHTML = Math.round(jsObject.current.temp) + "&#8457;";
     document.getElementById('feels_like').innerHTML = Math.round(jsObject.current.feels_like) + "&#8457;";
     document.getElementById('humidity').innerHTML = Math.round(jsObject.current.humidity) + "&#37;";
+
+
+
+
+    
     // var forecast = jsObject.daily.slice(1, 4);
     // const weekdays = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
     // for (let day = 0; day < forecast.length; day++) {
