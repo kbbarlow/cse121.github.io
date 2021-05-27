@@ -16,7 +16,7 @@ buttonInsert.onclick = function () {
   }
 };
 buttonClear.onclick = function () {
-  window.localStorage.clear();
+  localStorage.clear();
 };
 var sum = 0;
 for (let i = 0; i < localStorage.length; i++){
