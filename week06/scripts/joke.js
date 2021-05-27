@@ -5,10 +5,10 @@ fetch("https://dad-jokes.p.rapidapi.com/random/joke", {
 		"x-rapidapi-host": "dad-jokes.p.rapidapi.com"
 	}
 })
-.then((response) => response.json())
-.then((jsObject) =>{
-	console.log(jsObject)
-})
-.catch(err => {
-	console.error(err);
-});
+	.then((response) => response.json())
+	.then((jsObject) =>{
+		console.log(jsObject)
+	})
+	.catch(err => {
+		console.error(err);
+	});
