@@ -27,5 +27,5 @@ for (let i = 0; i < localStorage.length; i++){
   output.innerHTML +=` ${key}: ${value} minutes <br />`;
 }
 document.getElementById("time").innerHTML = `Total Minutes: ${sum}`
-document.getElementById("hoursleft").innerHTML = `Total Minutes: ${sum/60}`
+document.getElementById("hoursleft").innerHTML = `Total Hours: ${sum/60} Hours Left : ${40(sum/60)}`
 

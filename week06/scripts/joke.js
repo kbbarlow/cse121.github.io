@@ -8,7 +8,7 @@ fetch("https://dad-jokes.p.rapidapi.com/random/joke", {
 	.then((response) => response.json())
 	.then((jsObject) =>{
 		console.log(jsObject)
-		document.getElementById('joke').innerHTML = jsObject.body[0];
+		document.getElementById('joke').innerHTML = jsObject.setup;
 	})
 	.catch(err => {
 		console.error(err);
