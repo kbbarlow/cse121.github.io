@@ -20,7 +20,6 @@ for (let i = 0; i < localStorage.length; i++){
   const key = localStorage.key(i);
   const value = localStorage.getItem(key);
   var valu = value.split("*");
-  alert (valu[0]); 
   sum += parseInt(valu[0]); 
   output.innerHTML +=`Date ${key}: ${value} minutes: ${sum} sum <br />`;
 }
