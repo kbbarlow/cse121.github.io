@@ -8,6 +8,7 @@ fetch("https://dad-jokes.p.rapidapi.com/random/joke", {
 	.then((response) => response.json())
 	.then((jsObject) =>{
 		console.log(jsObject)
+		
 	})
 	.catch(err => {
 		console.error(err);
