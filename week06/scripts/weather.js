@@ -30,5 +30,5 @@ fetch(APIurl)
 //     } else {
 //       document.querySelector('.weatheralert').style.display = 'none';
 //     }
-//   });
+  });
 
