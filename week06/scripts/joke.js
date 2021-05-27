@@ -1,17 +1,13 @@
-var unirest = require("unirest");
-
-var req = unirest("GET", "https://matchilling-chuck-norris-jokes-v1.p.rapidapi.com/jokes/random");
-
-req.headers({
-	"accept": "application/json",
-	"x-rapidapi-key": "879a0f6dc9msh2a93d4cf3d0176dp154fd7jsn5faee78b95d1",
-	"x-rapidapi-host": "matchilling-chuck-norris-jokes-v1.p.rapidapi.com",
-	"useQueryString": true
-});
-
-
-req.end(function (res) {
-	if (res.error) throw new Error(res.error);
-
-	console.log(res.body);
+fetch("https://dad-jokes.p.rapidapi.com/random/joke", {
+	"method": "GET",
+	"headers": {
+		"x-rapidapi-key": "879a0f6dc9msh2a93d4cf3d0176dp154fd7jsn5faee78b95d1",
+		"x-rapidapi-host": "dad-jokes.p.rapidapi.com"
+	}
+})
+.then(response => {
+	console.log(response);
+})
+.catch(err => {
+	console.error(err);
 });
