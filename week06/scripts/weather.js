@@ -5,6 +5,7 @@ const APIurl ='https://api.openweathermap.org/data/2.5/weather?zip=84003,us&appi
 fetch(APIurl)
   .then((response) => response.json())
   .then((jsObject) => {
+    console.log(jsObject)
     const descipt = jsObject.current.weather[0].description;
     const image = 'https://openweathermap.org/img/wn/' + jsObject.current.weather[0].icon + '@2x.png';
     document.getElementById('icon').setAttribute('alt', descipt);
