@@ -1,10 +1,6 @@
 var unirest = require("unirest");
 
-var req = unirest("GET", "https://matchilling-chuck-norris-jokes-v1.p.rapidapi.com/jokes/search");
-
-req.query({
-	"query": "<REQUIRED>"
-});
+var req = unirest("GET", "https://matchilling-chuck-norris-jokes-v1.p.rapidapi.com/jokes/random");
 
 req.headers({
 	"accept": "application/json",
