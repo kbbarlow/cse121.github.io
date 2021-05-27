@@ -15,10 +15,14 @@ buttonInsert.onclick = function () {
     location.reload();
   }
 };
-
+var sum = 0;
 for (let i = 0; i < localStorage.length; i++){
   const key = localStorage.key(i);
   const value = localStorage.getItem(key);
+  var valu = value.split("*");
+  alert (valu[0]); 
+  sum += parseInt(valu[0]); 
+  alert (sum);
   output.innerHTML +=`${key}: ${value}<br />`;
 }
 
