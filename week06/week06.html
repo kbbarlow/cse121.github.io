@@ -5,8 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Track your driving time app</title>
+  <meta name="description" content="Driving time tracker with weather and joke" />
   <link rel="stylesheet" href="styles/week06.css">
 </head>
 
@@ -17,8 +17,43 @@
   <main>
     <section>
       <h2>
-        Today is <span id="weather"></span>.
+        Today is <span id="weather"></span>
       </h2>
+      <h2>Weather</h2>
+      <section class="weather">
+        <div class="weathersummary">
+          <h2>Today's Weather</h2>
+          <img id="icon" src="https://github.com/yuvraaaj/openweathermap-api-icons/blob/master/icons/unknown.png?raw=true"
+            alt="unknown">
+          <p>Currently: <span id="weather"></span> </p>
+          <p>Current Temp: <span id="current-temp"></span></p>
+          <p>Feels Like: <span id="feels_like"></span></p>
+          <p>Humidity: <span id="humidity"></span></p>
+        </div>
+        <div class="threeday">
+          <ul>
+            <li><span id="dayofweek1"></span></li>
+            <li class="icon"><img id="icon1"
+                src="https://github.com/yuvraaaj/openweathermap-api-icons/blob/master/icons/unknown.png?raw=true"
+                alt="unknown" /></li>
+            <li><span id="forecast1"></span>&#8457;</li>
+          </ul>
+          <ul>
+            <li><span id="dayofweek2"></span></li>
+            <li class="icon"><img id="icon2"
+                src="https://github.com/yuvraaaj/openweathermap-api-icons/blob/master/icons/unknown.png?raw=true"
+                alt="unknown"></li>
+            <li><span id="forecast2"></span>&#8457;</li>
+          </ul>
+          <ul>
+            <li><span id="dayofweek3"></span></li>
+            <li class="icon"><img id="icon3"
+                src="https://github.com/yuvraaaj/openweathermap-api-icons/blob/master/icons/unknown.png?raw=true"
+                alt="unknown"></li>
+            <li><span id="forecast3"></span>&#8457;</li>
+          </ul>
+        </div>
+      </section>
       <h3>
         <span id="driveStatus"></span>
       </h3>
