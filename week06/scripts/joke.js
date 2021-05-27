@@ -1,3 +1,7 @@
+const jokeAPI = 'https://dad-jokes.p.rapidapi.com/random/joke'
+
+
+
 fetch("https://dad-jokes.p.rapidapi.com/random/joke", {
 	"method": "GET",
 	"headers": {
