@@ -1,14 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:ital,wght@0,400;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@400;700&display=swap');
 
 body {
   font-size: 16px;
   line-height: 1.5;
   color:#011C26;
   background-color: #f5f5f5;
-}
-
-main,
-footer {
   font-family: 'Roboto', sans-serif;
 }
 
@@ -19,9 +15,11 @@ footer {
   text-align: center;
 }
 
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+}
 
 h1 {
-  font-family: 'Playfair Display', serif;
   font-size: 2rem;
   margin: 0;
 }
@@ -42,13 +40,20 @@ p {
 .weathersummary {
   width: 100%;
   max-width: 320px;
-  background-color: #fff;
+  color:#fff;
+  background-color: #011C26;
   font-size: 1rem;
   padding: 20px 0;
   text-align: center;
   box-shadow: 0 5px 15px rgba(2, 48, 71, 0.4);
   border-radius: 5px;
   margin: 0 auto;
+}
+#icon{
+  padding: 10px;
+  border-radius: 100%;
+  background-color: #00b4d8;
+   margin: 15px;
 }
 
 main {
