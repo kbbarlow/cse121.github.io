@@ -1,6 +1,4 @@
 const APIurl = 'https://api.openweathermap.org/data/2.5/onecall?lat=40.3928&lon=-111.7941&appid=f59f532633b10d55bbf07be7f8538bff&units=imperial'
-// const APIurl = 'http://maps.openweathermap.org/maps/2.0/weather/{op}/{z}/{x}/{y}&appid=2b00e7c5c696ad965d1f6a70f5d6c59b&units=imperial'
-// const APIurl ='https://api.openweathermap.org/data/2.5/weather?zip=84003,us&appid=2b00e7c5c696ad965d1f6a70f5d6c59b&units=imperial'
 
 fetch(APIurl)
   .then((response) => response.json())
@@ -14,28 +12,5 @@ fetch(APIurl)
     document.getElementById('current-temp').innerHTML = Math.round(jsObject.current.temp) + "&#8457;";
     document.getElementById('feels_like').innerHTML = Math.round(jsObject.current.feels_like) + "&#8457;";
     document.getElementById('humidity').innerHTML = Math.round(jsObject.current.humidity) + "&#37;";
-
-
-
-
-
-    // var forecast = jsObject.daily.slice(1, 4);
-    // const weekdays = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
-    // for (let day = 0; day < forecast.length; day++) {
-    //   const d = new Date(forecast[day].dt * 1000); // The new Date() function needs a milliseconds value. Convert Unix timestamp to milliseconds by multiplying by 1000.
-    //   const imagesrc = 'https://openweathermap.org/img/wn/' + forecast[day].weather[0].icon + '@2x.png';
-    //   const desc = forecast[day].weather[0].description;
-    //   document.getElementById(`dayofweek${day+1}`).textContent = weekdays[d.getDay()];
-    //   document.getElementById(`forecast${day+1}`).textContent = Math.round(forecast[day].temp.max);
-    //   document.getElementById(`icon${day+1}`).setAttribute('src', imagesrc);
-    //   document.getElementById(`icon${day+1}`).setAttribute('alt', desc);
-    // }
-//     if (jsObject.hasOwnProperty('alerts')) {
-//       document.querySelector('.weatheralert').style.display = 'block';
-//       document.getElementById('alert').innerHTML = jsObject.alerts[0].event;
-//       document.getElementById('alertdesc').innerHTML = jsObject.alerts[0].description;
-//     } else {
-//       document.querySelector('.weatheralert').style.display = 'none';
-//     }
   });
 
